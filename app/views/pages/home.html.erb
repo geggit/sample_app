@@ -2,7 +2,7 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's up?</h1>
+        <h3 class="micropost">What's up?</h3>
         <%= render 'shared/micropost_form' %>
         <%= render 'shared/feed' %>
       </td>
@@ -13,12 +13,10 @@
     </tr>
   </table>
 <% else %>
-  <h1>DORA</h1>
+  <h3>Tell-it</h3>
 
   <p>
-  This is the home page for the
-
-  DORA application.
+    Tell-it...
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
