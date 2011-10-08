@@ -21,8 +21,8 @@ class User < ActiveRecord::Base
   has_many :relationships, :foreign_key => "follower_id",
                            :dependent => :destroy
   has_many :following, :through => :relationships, :source => :followed
-  
-  
+
+
   has_many :reverse_relationships, :foreign_key => "followed_id",
                                    :class_name => "Relationship",
                                    :dependent => :destroy
@@ -45,6 +45,8 @@ class User < ActiveRecord::Base
                        :length       => { :within => 6..40 }
                        
   before_save :encrypt_password
+  
+  scope :admin, where(:admin => true)
   
   # Return true if the user's password matches the submitted password.
   def has_password?(submitted_password)
