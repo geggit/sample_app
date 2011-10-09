@@ -92,7 +92,7 @@ class User < ActiveRecord::Base
 
     def encrypt_password
       return if password.nil?
-      self.salt = make_salt if new_record
+      self.salt = make_salt if new_record?
       self.encrypted_password = encrypt(password)
     end
 
