@@ -2,12 +2,19 @@
   width: 710px;
 }
 
+.logo {
+  width: 100px;
+  float: left;
+  padding: 2em;
+}
+
 body {
   background: #cff;
 }
 
 header {
   padding-top: 20px;
+  padding: 2em;
 }
 
 header img {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,6 +7,9 @@
     <%= javascript_include_tag :defaults %>
   </head>
   <body>
+    <div class="logo">
+        <%= link_to logo, root_path %>
+    </div>
     <div class="container">
       <%= render 'layouts/header' %>
       <section class="round">
